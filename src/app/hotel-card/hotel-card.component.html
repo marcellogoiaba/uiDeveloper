@@ -1,7 +1,16 @@
-<div>
-  <p>{{hotel.title}}</p>
-  <p>{{hotel.address}}</p>
-  <p>{{hotel.price}} per night</p>
+<div class=" app-card clearfix">
   <img [alt]="hotel.title" [src]="hotel.image"/>
-  <button>Action</button>
+  <div class="hotel-info ">
+    <div class="address-div">
+      <h5>{{hotel.title}}</h5>
+      <p>{{hotel.address}}</p>
+    </div>
+    <div class="price-div">
+      <div class="price">
+        <h5>&euro;{{hotel.price}}</h5>
+        <span> per night</span>
+      </div>
+      <button class="app-button">Action</button>
+    </div>
+  </div>
 </div>

@@ -1,0 +1,87 @@
+@import './mixins';
+
+.app-card{
+    @include basicRoundedContainer;
+    margin-bottom: 32px;
+    img{
+        height: 200px;
+        display: inline-block;
+        float: left;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+    .hotel-info{
+        @include paddedContainer;
+        .address-div{
+            display: inline-block;
+            float: left;
+            height: 140px;
+            padding: 0 24px;
+            h5{  margin-bottom: 0; }
+            p{ 
+                font-size: .94em;
+                text-decoration: underline;
+            }
+        }
+        .price-div{
+            width: 184px;
+            height: 150px;
+            float: right;
+            display: inline-block;
+            padding-left: 24px;
+            border-left: 1px solid $borders;
+            button{ margin-top: 50px;  }
+            h5{ margin-bottom: 0; }
+            span{ font-family: 'proxima_nova_bold'}
+        }
+    }
+}
+
+// -------------------- Media Queries ----------------------
+@media screen and (max-width: 1451px){
+   .app-card{
+       .hotel-info{
+           .address-div{
+               height: 60px;
+               widows: inherit
+           }
+           .price-div{
+               width: calc(100% - 176px);
+               border-left: none;
+               border-top: 1px solid $borders;
+               padding-top: 20px;
+               height: 116px;
+               .price{
+                   display: inline-block;
+               }
+               button{
+                   display: inline-block;
+                   max-width: 140px;
+                   float: right;
+                   margin-top: 10px;
+               }
+           }
+       }
+   }
+}
+@media screen and (max-width: 1064px){
+
+}
+@media screen and (max-width: 992px){
+    .address-div{
+        display: inline-block;
+        float: left;
+        height: 140px;
+        padding: 0 24px;
+    }
+    .price-div{
+        width: 184px;
+        height: 150px;
+        float: right;
+        display: inline-block;
+        padding-left: 24px;
+        border-left: 1px solid $borders;
+        border-top: none;
+        button{ margin-top: 50px;  }
+    }
+}

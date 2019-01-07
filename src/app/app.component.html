@@ -1,5 +1,10 @@
 <app-header></app-header>
-<div>
-  <app-hotel-card *ngFor="let hotel of hotels" [hotel]="hotel"></app-hotel-card>
+<div class="app-container">
+  <h3>Headline</h3>
+  <div class="row">
+    <div class="col-lg-6 col-md-12" *ngFor="let hotel of hotels" >
+      <app-hotel-card [hotel]="hotel"></app-hotel-card>
+    </div>
+  </div>
 </div>
 

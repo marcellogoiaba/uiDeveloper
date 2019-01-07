@@ -1,0 +1,19 @@
+@import './mixins';
+
+
+.app-button{
+    width: 100%;
+    background: $main-colour;
+    color: $background;
+    border: 1px solid $main-colour;
+    padding: 12px;
+    border-radius: 4px;
+    transition: ease all .3s;
+}
+.app-button:hover{
+    cursor: pointer;
+    background: $main-colour-hover;
+}
+.app-button:active{
+    background: $main-colour-active;
+}
