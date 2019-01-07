@@ -41,47 +41,98 @@
 @media screen and (max-width: 1451px){
    .app-card{
        .hotel-info{
-           .address-div{
-               height: 60px;
-               widows: inherit
-           }
            .price-div{
-               width: calc(100% - 176px);
-               border-left: none;
-               border-top: 1px solid $borders;
-               padding-top: 20px;
-               height: 116px;
-               .price{
-                   display: inline-block;
-               }
-               button{
-                   display: inline-block;
-                   max-width: 140px;
-                   float: right;
-                   margin-top: 10px;
-               }
+               width: 160px;
            }
        }
    }
 }
-@media screen and (max-width: 1064px){
-
+@media screen and (max-width: 1401px){
+    .app-card{
+        .hotel-info{
+            .price-div{
+                width: 130px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1338px){
+    .app-card{
+        .hotel-info{
+            .price-div{
+                width: 100px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1276px){
+    .app-card{
+        img{ height: 140px;}
+        .hotel-info{
+            .address-div{
+                height: 100px;
+            }
+            .price-div{
+                width: 100px;
+                height: 100px;
+                button{
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1146px){
+    .app-card{
+        img{ height: 160px;}
+        .hotel-info{
+            .address-div{
+                display: block;
+                width: calc(100% - 136px);
+                height: 64px;
+            }
+            .price-div{
+                display: block;
+                float: left;
+                width: calc(100% - 136px);
+                height: 72px;
+                .price{
+                    display: inline block;
+                    width: 50%;
+                    float: left;
+                }
+                button{
+                    display: inline-block;
+                    width: 50%;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
 }
 @media screen and (max-width: 992px){
-    .address-div{
-        display: inline-block;
-        float: left;
-        height: 140px;
-        padding: 0 24px;
-    }
-    .price-div{
-        width: 184px;
-        height: 150px;
-        float: right;
-        display: inline-block;
-        padding-left: 24px;
-        border-left: 1px solid $borders;
-        border-top: none;
-        button{ margin-top: 50px;  }
+    .app-card{
+        img{ height: 200px;}
+        .hotel-info{
+            .address-div{
+                display: inline-block;
+                width: calc(100% - 360px);
+                float: left;
+            }
+            .price-div{
+                width: 184px;
+                height: 150px;
+                float: right;
+                display: inline-block;
+                .price{
+                    width: 100%;
+                    display: block;
+                }
+                button{ 
+                    width: 100%;
+                    margin-top: 50px
+                }
+            }
+        }
     }
 }
