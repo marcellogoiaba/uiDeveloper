@@ -1,0 +1,37 @@
+@import '../../styles/colours'; 
+
+.app-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $background;
+    border-bottom: 1px solid $borders;
+    ul{
+        display: inline-block;
+        float: left;
+        li{
+            list-style: none;
+            display: inline-block;
+            float: left;
+            color: $text-colour;
+            margin-top: 32px;
+            margin-right: 32px;
+
+        }
+    }
+    .app-navbar-brand, .client-logo{
+        display: inline-block;
+        float: left;
+        height: 30px;
+        object-fit: contain;
+        margin: 26px 32px 25px 32px
+    }
+    .app-navbar-brand{
+        width: 120px
+    }
+    .client-logo{
+        width: 188px;
+    }
+
+}
