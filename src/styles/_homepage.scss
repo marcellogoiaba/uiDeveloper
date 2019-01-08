@@ -1,5 +1,10 @@
+@import './colours';
+
 .app-container{
-    margin: 90px auto 40px  auto;
+    margin: 110px auto 40px  auto;
     max-width: 1700px;
     padding: 0 2%;
+    h3{
+        color: $headlines;
+    }
 }

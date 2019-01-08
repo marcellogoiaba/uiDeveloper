@@ -10,59 +10,95 @@
         border-top-left-radius: 4px;
         border-bottom-left-radius: 4px;
     }
-    .hotel-info{
+    .img-div{
+        content: '';
+        height: 200px;
+        width: 200px;
+        display: inline-block;
+        border-bottom-left-radius: 4px;
+        border-top-left-radius: 4px;
+    }
+    
+}
+.hotel-info{
+    @include paddedContainer;
+    
+}
+.address-div{
+    display: inline-block;
+    float: left;
+    height: 140px;
+    padding: 0 24px;
+    h5{  margin-bottom: 0; }
+    p{ 
+        font-size: .94em;
+        text-decoration: underline;
+    }
+}
+.price-div{
+    width: 184px;
+    height: 150px;
+    float: right;
+    display: inline-block;
+    padding-left: 24px;
+    border-left: 1px solid $borders;
+    button{ margin-top: 50px;  }
+    h5{ margin-bottom: 0; }
+    span{ font-family: 'proxima_nova_bold'}
+}
+
+.app-card-mobile{
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+    display: none;
+    @include basicRoundedContainer;
+    .info-address{
         @include paddedContainer;
-        .address-div{
-            display: inline-block;
-            float: left;
-            height: 140px;
-            padding: 0 24px;
-            h5{  margin-bottom: 0; }
-            p{ 
-                font-size: .94em;
-                text-decoration: underline;
-            }
-        }
-        .price-div{
-            width: 184px;
-            height: 150px;
-            float: right;
-            display: inline-block;
-            padding-left: 24px;
-            border-left: 1px solid $borders;
-            button{ margin-top: 50px;  }
-            h5{ margin-bottom: 0; }
-            span{ font-family: 'proxima_nova_bold'}
+        display: block;
+        float: left;
+        width: 100%;
+        h5{  margin-bottom: 0; }
+        p{ 
+            font-size: .94em;
+            text-decoration: underline;
         }
     }
+    .info-price{
+        float: right;
+        display: block;
+        text-align: center;
+        margin: -10px 16px 16px 16px;
+        h5{ margin-bottom: 0; }
+        span{ font-family: 'proxima_nova_bold'}
+    }
+}
+
+.img-div{
+    width: 100%;
+    height: 300px;
+    content: '';
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
 }
 
 // -------------------- Media Queries ----------------------
 @media screen and (max-width: 1451px){
-   .app-card{
-       .hotel-info{
-           .price-div{
-               width: 160px;
-           }
-       }
-   }
+    .price-div{
+        width: 160px;
+    }
 }
 @media screen and (max-width: 1401px){
-    .app-card{
-        .hotel-info{
-            .price-div{
-                width: 130px;
-            }
-        }
+    .price-div{
+        width: 130px;
     }
 }
 @media screen and (max-width: 1338px){
-    .app-card{
-        .hotel-info{
-            .price-div{
-                width: 100px;
-            }
-        }
+    .price-div{
+        width: 100px;
     }
 }
 @media screen and (max-width: 1276px){
@@ -134,5 +170,18 @@
                 }
             }
         }
+    }
+}
+@media screen and (max-width: 728px){
+    .app-card{
+       display: none;
+    }
+    .app-card-mobile{
+        display: block;
+    }
+}
+@media screen and (max-width: 510px){
+    .img-div{
+        height: 200px;
     }
 }

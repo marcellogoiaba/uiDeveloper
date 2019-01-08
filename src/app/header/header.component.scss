@@ -16,8 +16,9 @@
             display: inline-block;
             float: left;
             color: $text-colour;
-            padding: 31px 16px 10px 16px;
+            padding: 31px 16px 30px 16px;
             transition: ease all .3s;
+            margin-bottom: -20px;
         }
         li:hover{
             color: $main-colour;
@@ -42,6 +43,7 @@
     }
     .mobile-menu{
         margin-top: 80px;
+        display: none;
         .app-navbar-brand{
             display: block;
             width: 100%;
@@ -74,11 +76,14 @@
 
 }
 // ---------------------------- Media Queries ----------------------------
-@media screen and (max-width: 740px){
+@media screen and (max-width: 728px){
     .app-navbar{
         .float-right{
             display: none;
         }
         .app-navbar-collapse{ display: block }
+        .mobile-menu{
+            display: block
+        }
     }
 }
