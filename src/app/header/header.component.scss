@@ -8,7 +8,7 @@
     background: $background;
     border-bottom: 1px solid $borders;
     z-index: 1000;
-    ul{
+    .app-navbar-items{
         display: inline-block;
         float: left;
         li{
@@ -16,12 +16,18 @@
             display: inline-block;
             float: left;
             color: $text-colour;
-            margin-top: 27px;
-            margin-right: 32px;
-
+            padding: 31px 16px 10px 16px;
+            transition: ease all .3s;
+        }
+        li:hover{
+            color: $main-colour;
+            cursor: pointer;
         }
     }
-    .app-navbar-brand, .client-logo{
+    .app-navbar-collapse{
+        display: none;
+    }
+    .app-navbar-brand , .client-logo{
         display: inline-block;
         float: left;
         height: 30px;
@@ -34,5 +40,45 @@
     .client-logo{
         width: 188px;
     }
+    .mobile-menu{
+        margin-top: 80px;
+        .app-navbar-brand{
+            display: block;
+            width: 100%;
+        }
+    }
+    .mobile-items{
+        margin-top: -20px;;
+        width: 100%;
+        li{
+            padding: 7px 30px;
+            display: block;
+            width: 100%;
+            margin-top: 0;
+            transition: ease all .3s
+        }
+        li:hover{
+            cursor: pointer;
+            color: $main-colour;
+        }
+    }
+    .app-navbar-collapse{
+        img{ 
+            width: 20px; 
+        }
+        position: absolute;
+        right: 24px;
+        top: 31px;
+        cursor: pointer;
+    }
 
+}
+// ---------------------------- Media Queries ----------------------------
+@media screen and (max-width: 740px){
+    .app-navbar{
+        .float-right{
+            display: none;
+        }
+        .app-navbar-collapse{ display: block }
+    }
 }

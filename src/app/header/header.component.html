@@ -1,11 +1,11 @@
 <nav class="app-navbar">
   <div class="app-navbar-brand">
-    <a href="">
+    <a href="#">
       <img src="../../assets/img/logo.svg" alt="">
     </a>
   </div>
   <div class="float-right">
-    <ul>
+    <ul class="app-navbar-items">
       <li>One</li>
       <li>Two</li>
       <li>Three</li>
@@ -14,12 +14,18 @@
       <img src="../../assets/img/client-logo.svg" alt="">
     </div>
   </div>
+  <div class="app-navbar-collapse" (click)="showHideMenu()">
+    <img src="{{ imageLink }}" alt="">
+  </div>
+  <div *ngIf="showCollapseMenu" class="mobile-menu animated fadeInLeft clearfix">
+    <div class="app-navbar-brand clearfix">
+      <img src="../../assets/img/client-logo.svg" alt="">
+    </div>
+    <ul class="mobile-items ">
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+    </ul>
+  </div>
 </nav>
-<!-- <div>
-  <ul>
-    <li>One</li>
-    <li>Two</li>
-    <li>Three</li>
-  </ul>
-</div> -->
 
