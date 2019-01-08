@@ -52,6 +52,7 @@
     height: auto;
     margin-bottom: 30px;
     display: none;
+    transition: ease all .3s;
     @include basicRoundedContainer;
     .info-address{
         @include paddedContainer;
@@ -72,6 +73,10 @@
         h5{ margin-bottom: 0; }
         span{ font-family: 'proxima_nova_bold'}
     }
+}
+.app-card-mobile:hover{
+    cursor: pointer;
+    @include boxShadow;
 }
 
 .img-div{
